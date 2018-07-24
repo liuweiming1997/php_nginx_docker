@@ -1,12 +1,9 @@
 <?php
-$age = array(
-	"vimi" => array(1, 2, 3, 4),
-	"jake" => array(1, 2, 3, "vimi"));
+header("Content-type:application/text");
 
-foreach($age as $i_value) {
-	foreach ($i_value as $j_key => $j_value) {
-		echo "$j_key" . ":" . "$j_value    ";
-	}
-	echo "\n";
-}
+// 文件将被称为 downloaded.pdf
+header("Content-Disposition:attachment;filename='index.php'");
 
+// PDF 源在 original.pdf 中
+readfile("index.php");
+?>
