@@ -13,6 +13,7 @@ services:
             # 映射主机./conf.d目录到容器/etc/nginx/conf.d目录
             - "$PWD/nginx/default.conf:/etc/nginx/conf.d/default.conf"
             - "$PWD/html:/var/www/html"
+            - "$PWD/html:/vimiliu/html"
         # networks:
         #     - app_net
         # 容器名称
