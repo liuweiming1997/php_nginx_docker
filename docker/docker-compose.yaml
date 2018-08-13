@@ -16,7 +16,6 @@ services:
         # networks:
         #     - app_net
         # 容器名称
-        container_name: "compose-nginx"
         restart: always
     php:
         build: ./php-mysqli
@@ -28,7 +27,6 @@ services:
             - "$PWD/html:/var/www/html"
         # networks:
         #     - app_net
-        container_name: "compose-php"
         restart: always
 
     mysql:
@@ -43,7 +41,6 @@ services:
         #     app_net:
         #         # 固定子网ip，网段必须在子网络10.10.*.*
         #         ipv4_address: 10.10.10.1
-        container_name: "compose-mysql"
         restart: always
 # networks:
 #     # 配置docker network
